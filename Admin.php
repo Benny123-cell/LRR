@@ -51,7 +51,7 @@ include 'Header.php';
     <div id="home" class="container tab-pane active"><br>
  
         <b>Create Lecturer/TA Accounts </b>
-     <form method="post" action="Script.php">
+  <form method="post" action="Script.php">
                    <input type="hidden" name="frm_createlecturrer" value="true" required=""/>
  Full_Name
 <input type="text" name="fullname" placeholder="Full Name" class="form-control" required="">
@@ -63,9 +63,16 @@ Email
   <br> User Type : 
   <input type="radio" name="type" value="Lecturer" required=""> Lecturer
      <input type="radio" name="type" value="TA" required=""> T/A
-  <input type="submit" class="btn btn-primary" value="Create"><br>
-<?php 
+  <input type="submit" class="btn btn-primary" value="Create" onclick="check_email()"><br>
 
+function check_email($email){
+
+		if (preg_match('/^[\w\.-]+@([0-9a-zA-Z]+\.)?[0-9a-zA-Z]+\.[a-z]{2,3}$/',$email)){
+    			return true;
+			}
+		else{
+    		return false;
+			}
 error_reporting(E_ALL);
 if(isset($_SESSION['info_Admin_Users'])) {
   echo  '<hr><div class="alert alert-info" role="alert">'.$_SESSION['info_Admin_Users'].'</div>';
