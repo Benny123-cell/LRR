@@ -184,6 +184,7 @@ CREATE TABLE `lab_reports_table` (
 -- Dumping data for table `lab_reports_table`
 --
 
+
 INSERT INTO `lab_reports_table` (`Lab_Report_ID`, `Course_ID`, `Posted_Date`, `Deadline`, `Instructions`, `Title`, `Attachment_link_1`, `Attachment_link_2`, `Attachment_link_3`, `Attachment_link_4`, `Marks`, `Type`) VALUES
 (1, 10, '2019-01-11 16:52', '2019-02-11 17:00', 'Description of the lab....', 'Reading 1', '700IMPORTANT WORDS.txt', '', '', '', '4', 'Individual'),
 (2, 10, '2019-01-17 11:12', '2019-01-25 23:59', 'Read this paper http://sunnyday.mit.edu/16.355/budgen-david.pdf', 'Reading 2', '586LRR-Test-caseS.pdf', '', '', '', '6', 'Individual');
